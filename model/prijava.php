@@ -32,6 +32,12 @@
             return $conn->query($query_str);
         }
 
+        public static function getById($id, mysqli $conn)
+        {
+            $query_string = "SELECT * FROM prijave WHERE id=$id";
+            return $conn->query($query_string);
+        }
+
 
 }
 
